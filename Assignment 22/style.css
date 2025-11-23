@@ -11,8 +11,13 @@ main {
     width: 100%;
 }
 
+html {
+    font-size: clamp(10px, 2vw, 20px);
+}
+
 main {
     background-color: #000;
+    overflow: scroll;
 }
 
 .white-keys,
@@ -25,7 +30,6 @@ main {
 
 #piano {
     position: relative;
-    width: fit-content;
 }
 
 .black-keys {
@@ -59,12 +63,16 @@ main {
     background-color: white;
 }
 
-.white-keys li:active, .black-keys li:active, .white-keys li.active, .black-keys li.active {
-    transform: translate(0,0.5rem) scale(0.95);
+.white-keys li:active,
+.black-keys li:active,
+.white-keys li.active,
+.black-keys li.active {
+    transform: translate(0, 0.5rem) scale(0.95);
 }
 
-.white-keys li:active, .white-keys li.active {
-  background-color: #7770709f;
+.white-keys li:active,
+.white-keys li.active {
+    background-color: #7770709f;
 }
 
 .black-keys li {
@@ -73,12 +81,11 @@ main {
     color: white;
     background-color: #000;
     box-shadow: 0rem 0.4rem 0.1rem rgba(60, 58, 58, 0.314);
-    /* padding: 1rem; */
     list-style: none;
 }
 
 .black-keys .gap {
-    width: 1.6rem; 
+    width: 1.6rem;
     height: 7rem;
     background-color: transparent;
     box-shadow: none;
