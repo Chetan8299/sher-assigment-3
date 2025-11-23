@@ -17,7 +17,7 @@ html {
 
 main {
     background-color: #000;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .white-keys,
