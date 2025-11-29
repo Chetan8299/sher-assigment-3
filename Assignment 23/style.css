@@ -13,7 +13,7 @@ html, body, main, .reels {
 
 html {
     height: 100vh;
-    font-size: clamp(12px, 1vw, 18px);
+    font-size: clamp(16px, 1vw, 25px);
 }
 
 main {
