@@ -11,6 +11,11 @@ html, body, main, .reels {
     color: white;
 }
 
+html {
+    height: 100vh;
+    font-size: clamp(12px, 1vw, 18px);
+}
+
 main {
     background: linear-gradient(to bottom right, black, rgb(26, 25, 25), rgb(26, 25, 25),  black );
     padding: 1rem;
@@ -28,7 +33,7 @@ main {
 }
 .reel {
     height: 100%;
-    width: 350px;
+    max-width: 350px;
     margin: 1rem auto;
     position: relative;
     overflow: hidden;
@@ -94,15 +99,62 @@ main {
     text-align: center;
 }
 
+.right div {
+    width: 100%;
+    cursor: pointer;
+}
+
 .right i {
     font-size: 1.5rem;
+    pointer-events: none;
 }
 
 .right h6 {
     font-size: 1rem;
     font-weight: 500;
+    pointer-events: none;
 }
 
 .love {
     color: red;
 }
+
+.mute {
+    color: white;
+    position: absolute;
+    z-index: 3;
+    top: 2%;
+    right: 5%;
+    background-color: rgba(0, 0, 0, 0.37);
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.mute i {
+    pointer-events: none;
+}
+
+.follow {
+    cursor: pointer;
+}
+
+@media screen and (min-device-width: 1440px) {
+    .reel {
+        max-width: 50vw;
+        width: 50vw;
+    }
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 768px){
+    .reel {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
