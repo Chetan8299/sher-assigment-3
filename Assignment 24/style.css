@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+html, body, main, video, #box {
+    height: 100%;
+    width: 100%;
+}
+
+:root{
+    --x: 200px;
+    --y: 200px;
+}
+
+main {
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    top: 10vh;
+    color: white;
+    left: 4vw;
+    width: fit-content;
+    z-index: 10;
+}
+
+video {
+    object-fit: cover;
+}
+
+#box {
+    position: absolute;
+    top: 0;
+    background: radial-gradient(150px at var(--x) var(--y),rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.151), black);
+}
