@@ -6,20 +6,26 @@ addEventListener("mousemove", (e) => {
 const h1 = document.querySelector("h1");
 const txt = h1.innerText;
 const characters = "ABCEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+let iterations = 0;
+let interval = null;
+
+function randomText() {
+    const str = txt
+                    .split("")
+                    .map((char, index) => index < iterations ? char : characters
+                    .split("")[Math.floor(Math.random() * 52)])
+                    .join("");
+    h1.innerText = str;
+    iterations += 0.25;
+
+    if(iterations > txt.length) {
+        clearInterval(interval);
+        iterations = 0;
+    }
+}
 
 h1.addEventListener("mouseenter", () =>  {
-    console.log("hi")
-    let int = setInterval(() => {
-        const str = txt
-                        .split("")
-                        .map(() => characters
-                        .split("")[Math.floor(Math.random() * 52)])
-                        .join("");
-        h1.innerText = str
-    }, 30)
-
-    setTimeout(() => {
-        clearInterval(int);
-        h1.innerText = txt;
-    }, 1000)
+    if (interval) clearInterval(interval);
+    iterations = 0;
+    interval = setInterval(randomText, 30)
 })
