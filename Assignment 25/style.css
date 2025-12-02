@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body,
+main {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  background-color: black;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes bgRotate {
+  from {
+    --rotate: 0deg;
+  }
+  to {
+    --rotate: 360deg;
+  }
+}
+
+.card {
+  max-width: 22rem;
+  height: 70vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 1.5rem;
+  border: 0px solid transparent;
+  transition: all 0.3s linear;
+  box-shadow: 0 0 0px #ffffff;
+  text-shadow: 0 0 0px #fccd34;
+  background: linear-gradient(to bottom, black) padding-box,
+    conic-gradient(from var(--rotate), #fccd34, black, #fccd34) border-box;
+  animation: bgRotate 5s infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+
+.card:hover {
+  box-shadow: 0 0 50px #ffffff;
+  text-shadow: 0 0 10px #fccd34;
+  animation-play-state: running;
+  border-width: 5px;
+  color: #fccd34;
+}
+
+.card img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  background-position: center center;
+}
