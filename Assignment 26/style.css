@@ -47,7 +47,7 @@ main {
   left: anchor(left);
   right: anchor(right);
   bottom: anchor(bottom);
-  transition: all 0.3s linear;
+  transition: all 0.3s cubic-bezier(.85,.66,.53,1.2);
   mix-blend-mode: difference;
   border-radius: 0.5rem;
   z-index: 2;
