@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "HelveticaCustom";
+  src: url("./fonts/helvetica-light-587ebe5a59211.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaCustom";
+  src: url("./fonts/Helvetica.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaCustom";
+  src: url("./fonts/Helvetica-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "HelveticaCustom", Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  background-color: black;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 3rem;
+  gap: 1rem;
+  height: 10vh;
+}
+
+nav > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+}
+
+.bookacall {
+  all: unset;
+  position: relative;
+  cursor: pointer;
+  font-weight: 100;
+}
+
+.bookacall::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: calc(100% - 20px);
+  height: 0.1rem;
+  background: black;
+}
+
+.bookacall::after {
+  content: "\EA70";
+  font-family: "remixicon";
+  font-size: 1.1rem;
+  margin-left: 6px;
+}
+
+main {
+  height: 90vh;
+  background-image: url("./assets/man.png");
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 50%;
+  padding: 5rem 12rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15vh;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.stats > div {
+  position: relative;
+  font-weight: 100;
+}
+.stats > div::before {
+  position: absolute;
+  right: 100%;
+  top: 15%;
+  content: "\F4B2";
+  font-family: "remixicon";
+  font-size: 1.1rem;
+}
+
+.stats-num {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+.hello h1 {
+  text-transform: capitalize;
+  font-size: 10rem;
+  font-weight: 300;
+  letter-spacing: -0.5rem;
+}
+
+.hello p {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sideline {
+  position: absolute;
+  top: 50vh;
+  left: -12vw;
+  rotate: -90deg;
+  display: flex;
+  gap: 1rem;
+  color: rgba(103, 102, 102, 0.579);
+}
+
+.sideline div:nth-child(2) {
+  height: 1.5px;
+  width: 52vh;
+  background-color: rgba(103, 102, 102, 0.579);
+  margin-top: 0.5rem;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 8vh;
+  left: 12vw;
+  color: rgba(0, 0, 0, 0.747);
+}
+
+.scroll-down::after {
+  content: "\EA4C";
+  font-family: "remixicon";
+  font-size: 1.1rem;
+  margin-left: 0.4rem;
+}
