@@ -1,0 +1,90 @@
+#services {
+  height: 50vh;
+  width: 100%;
+  display: grid;
+  padding: 2rem;
+  gap: 1rem;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "service-left service-mid service-right";
+}
+
+.service-left {
+  grid-area: service-left;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+.service-left p {
+  font-size: 1.8rem;
+  width: 80%;
+  margin-top: 2rem;
+}
+.service-left div {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-mid {
+  grid-area: service-mid;
+  background-image: url("/service1.avif");
+  background-size: cover;
+  border-radius: 3rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+.service-mid .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.service-right {
+  grid-area: service-right;
+  margin: 0 1rem;
+}
+
+.service-right .top {
+  background-image: url("/service2.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 2rem;
+  color: white;
+  height: 55%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.service-right .bottom {
+  margin-top: 1rem;
+}
+
+.service-right .bottom p {
+  width: 55%;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.service-right .bottom > div {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.service-right .bottom .left,
+.service-right .bottom .right {
+  border-radius: 50%;
+  border: 1px solid rgba(98, 96, 96, 0.136);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}

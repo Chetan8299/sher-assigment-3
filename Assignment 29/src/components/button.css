@@ -1,0 +1,13 @@
+.btn-primary{
+    background-color: #0d1a2d;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
